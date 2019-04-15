@@ -172,11 +172,11 @@ int	socket		args( ( int domain, int type, int protocol ) );
 #endif
 
 #if	defined(linux)
-int	accept		args( ( int s, struct sockaddr *addr, int *addrlen ) );
-int	bind		args( ( int s, struct sockaddr *name, int namelen ) );
+int	accept		args( ( int s, struct sockaddr *addr, unsigned int *addrlen ) );
+int	bind		args( ( int s, const struct sockaddr *name, unsigned int namelen ) );
 int	close		args( ( int fd ) );
-int	getpeername	args( ( int s, struct sockaddr *name, int *namelen ) );
-int	getsockname	args( ( int s, struct sockaddr *name, int *namelen ) );
+int	getpeername	args( ( int s, struct sockaddr *name, unsigned int *namelen ) );
+int	getsockname	args( ( int s, struct sockaddr *name, unsigned int *namelen ) );
 int	gettimeofday	args( ( struct timeval *tp, struct timezone *tzp ) );
 int	listen		args( ( int s, int backlog ) );
 int	read		args( ( int fd, char *buf, int nbyte ) );
