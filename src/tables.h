@@ -32,34 +32,6 @@
 *       ROT license, in the file doc/rot.license                           * 
 ***************************************************************************/
 
-/* game tables */
-extern	const	struct	clan_type	clan_table[MAX_CLAN];
-extern	const	struct	position_type	position_table[];
-extern	const	struct	sex_type	sex_table[];
-extern	const	struct	size_type	size_table[];
-
-/* flag tables */
-extern	const	struct	flag_type	act_flags[];
-extern	const	struct	flag_type	plr_flags[];
-extern	const	struct	flag_type	affect_flags[];
-extern	const	struct	flag_type	shield_flags[];
-extern	const	struct	flag_type	off_flags[];
-extern	const	struct	flag_type	imm_flags[];
-extern	const	struct	flag_type	form_flags[];
-extern	const	struct	flag_type	part_flags[];
-extern	const	struct	flag_type	comm_flags[];
-extern	const	struct	flag_type	item_extra[];
-extern	const	struct	flag_type	item_wear[];
-extern	const	struct	flag_type	item_weapon[];
-extern	const	struct	flag_type	extra_flags[];
-extern	const	struct	flag_type	wear_flags[];
-extern	const	struct	flag_type	weapon_flags[];
-extern	const	struct	flag_type	container_flags[];
-extern	const	struct	flag_type	portal_flags[];
-extern	const	struct	flag_type	room_flags[];
-extern	const	struct	flag_type	area_room[];
-extern	const	struct	flag_type	exit_flags[];
-
 struct flag_type
 {
     char *name;
@@ -94,4 +66,33 @@ struct size_type
 {
     char *name;
 };
+
+/* game tables */
+extern	const	struct	clan_type	clan_table[MAX_CLAN];
+extern	const	struct	position_type	position_table[];
+extern	const	struct	sex_type	sex_table[];
+extern	const	struct	size_type	size_table[];
+
+/* flag tables */
+extern	const	struct	flag_type	act_flags[];
+extern	const	struct	flag_type	plr_flags[];
+extern	const	struct	flag_type	affect_flags[];
+extern	const	struct	flag_type	shield_flags[];
+extern	const	struct	flag_type	off_flags[];
+extern	const	struct	flag_type	imm_flags[];
+extern	const	struct	flag_type	form_flags[];
+extern	const	struct	flag_type	part_flags[];
+extern	const	struct	flag_type	comm_flags[];
+extern	const	struct	flag_type	item_extra[];
+extern	const	struct	flag_type	item_wear[];
+extern	const	struct	flag_type	item_weapon[];
+extern	const	struct	flag_type	extra_flags[];
+extern	const	struct	flag_type	wear_flags[];
+extern	const	struct	flag_type	weapon_flags[];
+extern	const	struct	flag_type	container_flags[];
+extern	const	struct	flag_type	portal_flags[];
+extern	const	struct	flag_type	room_flags[];
+extern	const	struct	flag_type	area_room[];
+extern	const	struct	flag_type	exit_flags[];
+
 
