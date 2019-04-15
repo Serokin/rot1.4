@@ -955,7 +955,7 @@ void init_descriptor( int control )
     struct sockaddr_in sock;
     struct hostent *from;
     int desc;
-    int size;
+    unsigned int size;
 
     size = sizeof(sock);
     getsockname( control, (struct sockaddr *) &sock, &size );
@@ -1107,7 +1107,7 @@ void init_descriptor_www( int wwwcontrol )
     struct sockaddr_in sock;
     struct hostent *from;
     int desc;
-    int size;
+    unsigned int size;
     char clandat[MAX_STRING_LENGTH];
     BUFFER *output;
     DESCRIPTOR_DATA *d;
