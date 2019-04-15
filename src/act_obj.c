@@ -754,10 +754,12 @@ void do_put( CHAR_DATA *ch, char *argument )
 	
 	if (container->pIndexData->item_type == ITEM_PIT 
 	&&  !CAN_WEAR(container,ITEM_TAKE))
+	{
 	    if (obj->timer)
 		SET_BIT(obj->extra_flags,ITEM_HAD_TIMER);
 	    else
 	        obj->timer = number_range(100,200);
+	}
 
 	obj_from_char( obj );
 	obj_to_obj( obj, container );
@@ -799,10 +801,12 @@ void do_put( CHAR_DATA *ch, char *argument )
 		{
 		    if (container->pIndexData->item_type == ITEM_PIT
 		    &&  !CAN_WEAR(obj, ITEM_TAKE) )
+		    {
 			if (obj->timer)
 			    SET_BIT(obj->extra_flags,ITEM_HAD_TIMER);
 			else
 			    obj->timer = number_range(100,200);
+		    }
 		    obj_from_char( obj );
 		    obj_to_obj( obj, container );
 		    count++;
@@ -842,10 +846,12 @@ void do_put( CHAR_DATA *ch, char *argument )
 		{
 		    if (container->pIndexData->item_type == ITEM_PIT
 		    &&  !CAN_WEAR(obj, ITEM_TAKE) )
+		    {
 			if (obj->timer)
 			    SET_BIT(obj->extra_flags,ITEM_HAD_TIMER);
 			else
 			    obj->timer = number_range(100,200);
+		    }
 		    obj_from_char( obj );
 		    obj_to_obj( obj, container );
 		    count++;
@@ -884,10 +890,12 @@ void do_put( CHAR_DATA *ch, char *argument )
 	    {
 	    	if (container->pIndexData->item_type == ITEM_PIT
 	    	&&  !CAN_WEAR(obj, ITEM_TAKE) )
+		{
 	    	    if (obj->timer)
 			SET_BIT(obj->extra_flags,ITEM_HAD_TIMER);
 	    	    else
 	    	    	obj->timer = number_range(100,200);
+		}
 		obj_from_char( obj );
 		obj_to_obj( obj, container );
 		count++;
@@ -3320,10 +3328,12 @@ int get_cost( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy )
 	    {
 	    	if ( obj->pIndexData == obj2->pIndexData
 		&&   !str_cmp(obj->short_descr,obj2->short_descr) )
+		{
 	 	    if (IS_OBJ_STAT(obj2,ITEM_INVENTORY))
 			cost /= 2;
 		    else
                     	cost = cost * 3 / 4;
+		}
 	    }
     }
 
