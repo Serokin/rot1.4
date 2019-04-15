@@ -2020,12 +2020,10 @@ bool is_safe_mock(CHAR_DATA *ch, CHAR_DATA *victim)
 bool is_voodood(CHAR_DATA *ch, CHAR_DATA *victim)
 {
     OBJ_DATA *object;
-    bool found;
 
     if ( ch->level > HERO )
 	return FALSE;
 
-    found = FALSE;
     for ( object = victim->carrying; object != NULL; object = object->next_content )
     {
 	if (object->pIndexData->vnum == OBJ_VNUM_VOODOO)
