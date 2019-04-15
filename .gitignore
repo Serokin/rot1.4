@@ -1,0 +1,6 @@
+player/*
+bin/*
+gods/*
+area/*
+src/*.o
+log/*
