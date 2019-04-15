@@ -1109,7 +1109,7 @@ void init_descriptor_www( int wwwcontrol )
     int desc;
     unsigned int size;
     char clandat[MAX_STRING_LENGTH];
-    BUFFER *output;
+    BUFFER *output = new_buf();
     DESCRIPTOR_DATA *d;
     int iClass;
     int iRace;
@@ -1193,7 +1193,6 @@ void init_descriptor_www( int wwwcontrol )
 
     nMatch = 0;
     buf[0] = '\0';
-    output = new_buf();
     sprintf(buf, WWW_WHO);
     if ((fg = fopen(buf,"w")) == NULL)
     {
@@ -1282,6 +1281,7 @@ void init_descriptor_www( int wwwcontrol )
     fclose(fg);
     close( desc );
     free_descriptor(dnew);
+    free_buf(output);
     return;
 }
 #endif
